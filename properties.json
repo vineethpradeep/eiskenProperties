@@ -1,0 +1,361 @@
+[
+  {
+    "name": "",
+    "type": "",
+    "description": "",
+    "location": {
+      "street": "",
+      "city": "",
+      "state": "",
+      "zipcode": ""
+    },
+    "beds": "",
+    "baths": "",
+    "square_feet": "",
+    "amenities": [],
+    "rates": {
+      "weekly": "",
+      "monthly": ""
+    },
+    "seller_info": {
+      "name": "",
+      "email": "",
+      "phone": ""
+    },
+    "images": []
+  },
+  {
+    "owner": "1",
+    "name": "Swansea Seaside Apartment",
+    "type": "Apartment",
+    "description": "A cozy apartment with a seaside view, perfect for relaxation and enjoyment.",
+    "location": {
+      "street": "10 Marina Villas",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA1 1WG"
+    },
+    "beds": 2,
+    "baths": 1,
+    "square_feet": 900,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 800,
+      "monthly": 3000
+    },
+    "seller_info": {
+      "name": "Jane Smith",
+      "email": "jane@gmail.com",
+      "phone": "01792 555555"
+    },
+    "images": [],
+    "is_featured": true
+  },
+  {
+    "owner": "2",
+    "name": "City Centre Studio",
+    "type": "Studio",
+    "description": "A modern studio located in the heart of Swansea, close to all amenities.",
+    "location": {
+      "street": "22 Kingsway",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA1 5LF"
+    },
+    "beds": 1,
+    "baths": 1,
+    "square_feet": 500,
+    "amenities": ["Full kitchen", "Air Conditioning", "Smart TV"],
+    "rates": {
+      "weekly": 600,
+      "monthly": 2200
+    },
+    "seller_info": {
+      "name": "Tom Jones",
+      "email": "tom@gmail.com",
+      "phone": "01792 666666"
+    },
+    "images": [],
+    "is_featured": false
+  },
+  {
+    "owner": "3",
+    "name": "Maritime Quarter Flat",
+    "type": "Flat",
+    "description": "A spacious flat in the Maritime Quarter with stunning marina views.",
+    "location": {
+      "street": "18 Trawler Road",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA1 1XW"
+    },
+    "beds": 3,
+    "baths": 2,
+    "square_feet": 1200,
+    "amenities": [
+      "Full kitchen",
+      "Dishwasher",
+      "Balcony/Patio",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 1000,
+      "monthly": 3800
+    },
+    "seller_info": {
+      "name": "Mary Williams",
+      "email": "mary@gmail.com",
+      "phone": "01792 777777"
+    },
+    "images": [],
+    "is_featured": true
+  },
+  {
+    "owner": "4",
+    "name": "Uplands Garden House",
+    "type": "House",
+    "description": "A charming house with a beautiful garden, located in the Uplands area.",
+    "location": {
+      "street": "50 Uplands Crescent",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA2 0PG"
+    },
+    "beds": 4,
+    "baths": 3,
+    "square_feet": 2000,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Hot Tub",
+      "Wheelchair Accessible",
+      "Air Conditioning",
+      "Balcony/Patio",
+      "Smart TV"
+    ],
+    "rates": {
+      "weekly": 1500,
+      "monthly": 5500
+    },
+    "seller_info": {
+      "name": "David Brown",
+      "email": "david@gmail.com",
+      "phone": "01792 888888"
+    },
+    "images": [],
+    "is_featured": false
+  },
+  {
+    "owner": "5",
+    "name": "Singleton Park Villa",
+    "type": "Villa",
+    "description": "A luxurious villa near Singleton Park, perfect for a large family.",
+    "location": {
+      "street": "30 Sketty Lane",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA2 8QG"
+    },
+    "beds": 5,
+    "baths": 4,
+    "square_feet": 3000,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Gym/Fitness Center",
+      "Air Conditioning",
+      "Balcony/Patio",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 2000,
+      "monthly": 7500
+    },
+    "seller_info": {
+      "name": "Linda Johnson",
+      "email": "linda@gmail.com",
+      "phone": "01792 999999"
+    },
+    "images": [],
+    "is_featured": true
+  },
+  {
+    "owner": "6",
+    "name": "Swansea Bay Penthouse",
+    "type": "Penthouse",
+    "description": "A stunning penthouse with panoramic views of Swansea Bay.",
+    "location": {
+      "street": "25 Victoria Quay",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA1 3XG"
+    },
+    "beds": 3,
+    "baths": 3,
+    "square_feet": 1800,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Gym/Fitness Center",
+      "Air Conditioning",
+      "Balcony/Patio",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 1800,
+      "monthly": 6800
+    },
+    "seller_info": {
+      "name": "Chris Evans",
+      "email": "chris@gmail.com",
+      "phone": "01792 101010"
+    },
+    "images": [],
+    "is_featured": true
+  },
+  {
+    "owner": "7",
+    "name": "Marina View Apartment",
+    "type": "Apartment",
+    "description": "An elegant apartment with marina views, perfect for a relaxing stay.",
+    "location": {
+      "street": "14 Sail Bridge",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA1 1RN"
+    },
+    "beds": 2,
+    "baths": 1,
+    "square_feet": 1000,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 900,
+      "monthly": 3200
+    },
+    "seller_info": {
+      "name": "Emma Davis",
+      "email": "emma@gmail.com",
+      "phone": "01792 111111"
+    },
+    "images": [],
+    "is_featured": false
+  },
+  {
+    "owner": "8",
+    "name": "Clyne Gardens Bungalow",
+    "type": "Bungalow",
+    "description": "A peaceful bungalow near Clyne Gardens, ideal for nature lovers.",
+    "location": {
+      "street": "8 Clyne Valley Road",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA3 5BU"
+    },
+    "beds": 2,
+    "baths": 1,
+    "square_feet": 1100,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 850,
+      "monthly": 3100
+    },
+    "seller_info": {
+      "name": "Oliver Roberts",
+      "email": "oliver@gmail.com",
+      "phone": "01792 222222"
+    },
+    "images": [],
+    "is_featured": true
+  },
+  {
+    "owner": "9",
+    "name": "Sandfields Townhouse",
+    "type": "Townhouse",
+    "description": "A modern townhouse in Sandfields, close to the beach and city center.",
+    "location": {
+      "street": "33 Sandfields Road",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA1 3SN"
+    },
+    "beds": 4,
+    "baths": 2,
+    "square_feet": 1600,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Air Conditioning",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 1300,
+      "monthly": 5000
+    },
+    "seller_info": {
+      "name": "Sophie Wilson",
+      "email": "sophie@gmail.com",
+      "phone": "01792 333333"
+    },
+    "images": [],
+    "is_featured": false
+  },
+  {
+    "owner": "10",
+    "name": "Brynmill Cottage",
+    "type": "Cottage",
+    "description": "A quaint cottage in Brynmill, offering a quiet and comfortable stay.",
+    "location": {
+      "street": "12 Brynmill Lane",
+      "city": "Swansea",
+      "state": "UK",
+      "zipcode": "SA2 0AU"
+    },
+    "beds": 3,
+    "baths": 1,
+    "square_feet": 1300,
+    "amenities": [
+      "Full kitchen",
+      "Washer & Dryer",
+      "Free Parking",
+      "Smart TV",
+      "Coffee Maker"
+    ],
+    "rates": {
+      "weekly": 950,
+      "monthly": 3500
+    },
+    "seller_info": {
+      "name": "Jack Thompson",
+      "email": "jack@gmail.com",
+      "phone": "01792 444444"
+    },
+    "images": [],
+    "is_featured": true
+  }
+]
