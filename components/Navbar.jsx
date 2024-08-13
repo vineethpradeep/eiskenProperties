@@ -43,7 +43,7 @@ const Navbar = () => {
             <Image
               alt="Eisken propertie logo"
               src={logo}
-              className="h-24 w-auto"
+              className="w-auto h-auto max-h-24 max-w-full sm:max-h-32 sm:max-w-full"
               width={500}
               height={300}
             />
