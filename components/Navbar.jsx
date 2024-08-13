@@ -43,10 +43,9 @@ const Navbar = () => {
             <Image
               alt="Eisken propertie logo"
               src={logo}
-              className="w-auto h-auto max-h-24 max-w-full sm:max-h-32 sm:max-w-full"
+              className="w-auto sm:h-20"
               width={500}
               height={300}
-              layout="responsive"
             />
           </Link>
         </div>
