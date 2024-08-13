@@ -19,7 +19,6 @@ const ContactForm = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
-    console.log(e.target.value);
     e.preventDefault();
 
     if (generalQuery) {
@@ -51,7 +50,6 @@ const ContactForm = ({
         toast.error("Error while submitting the form");
       }
     } catch (err) {
-      console.log(err);
       toast.error("Error while submitting the form");
     } finally {
       setName("");

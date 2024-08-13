@@ -57,8 +57,7 @@ function BookmarksProperty({ property }) {
         setIsBookmarked(data.isBookmarked);
       }
     } catch (err) {
-      console.error(err);
-      toast.error("something went wrong");
+      toast.error("something went wrong", err);
     }
   };
 

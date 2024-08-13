@@ -23,7 +23,6 @@ export const GET = async () => {
       status: 200,
     });
   } catch (err) {
-    console.log("Something went wrong");
     return new Response("Something went wrong", { status: 500 });
   }
 };
@@ -57,7 +56,6 @@ export const POST = async (req) => {
       status: 200,
     });
   } catch (err) {
-    console.log(err);
     return new Response("Something went wrong", { status: 500 });
   }
 };

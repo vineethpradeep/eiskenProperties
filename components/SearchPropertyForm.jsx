@@ -15,7 +15,6 @@ const SearchPropertyForm = ({ translateUp }) => {
       const query = `?location=${location}&propertyType=${propertyType}`;
       router.push(`/properties/search${query}`);
     }
-    console.log(location, propertyType);
   };
 
   return (

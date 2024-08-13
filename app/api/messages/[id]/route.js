@@ -26,7 +26,6 @@ export const PUT = async (req, { params }) => {
     await message.save();
     return new Response(JSON.stringify(message), { status: 200 });
   } catch (err) {
-    console.log(err);
     return new Response("Something went wrong", { status: 500 });
   }
 };
@@ -54,7 +53,6 @@ export const DELETE = async (req, { params }) => {
 
     return new Response("Message Deleted", { status: 200 });
   } catch (err) {
-    console.log(err);
     return new Response("Something went wrong", { status: 500 });
   }
 };

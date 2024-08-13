@@ -1,8 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
 import PropertyCard from "@/components/PropertyCard";
 import Spinner from "@/components/Spinner";
 import PropertyGoBack from "@/components/PropertyGoBack";
@@ -36,7 +34,6 @@ const SearchProperties = () => {
     };
     fetchSearchProperties();
   }, [location, propertyType]);
-  //   console.log(properties);
 
   return (
     <>

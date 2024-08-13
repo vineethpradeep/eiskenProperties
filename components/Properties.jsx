@@ -21,7 +21,6 @@ const Properties = () => {
           throw new Error("Failed to fetch data");
         }
         const data = await res.json();
-        console.log(data);
         setProperties(data.properties);
         setTotalItems(data.totalProperties);
       } catch (err) {

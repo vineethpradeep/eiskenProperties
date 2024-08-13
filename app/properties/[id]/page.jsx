@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { fetchProperty } from "@/utils/request";
 import { useParams } from "next/navigation";
-import PropertyContact from "@/components/PropertyContact";
 import PropertyAmenities from "@/components/PropertyAmenities";
 import PropertyDesc from "@/components/PropertyDesc";
 import PropertyInfo from "@/components/PropertyInfo";
@@ -64,7 +63,6 @@ const PropertyPage = () => {
                   <BookmarksProperty property={property} />
                   <ShareProperty property={property} />
                 </div>
-                {/* <PropertyContact property={property} /> */}
                 <ContactForm
                   property={property}
                   description={false}

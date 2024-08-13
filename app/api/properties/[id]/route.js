@@ -14,7 +14,6 @@ export const GET = async (req, { params }) => {
       status: 200,
     });
   } catch (err) {
-    console.log(err);
     return new Response("Something went wrong", { status: 500 });
   }
 };
@@ -47,7 +46,6 @@ export const DELETE = async (req, { params }) => {
       status: 200,
     });
   } catch (err) {
-    console.log(err);
     return new Response("Something went wrong", { status: 500 });
   }
 };
@@ -101,8 +99,6 @@ export const PUT = async (req, { params }) => {
       },
       owner: userId,
     };
-
-    console.log(propertyData);
 
     const updatedProperty = await Property.findByIdAndUpdate(id, propertyData);
 

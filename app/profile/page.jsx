@@ -12,7 +12,6 @@ function Profile() {
   const profileName = session?.user?.name;
   const profileEmail = session?.user?.email;
   const profileImage = session?.user?.image;
-  //   console.log(session);
   const [userProperties, setUserProperties] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +27,7 @@ function Profile() {
           setUserProperties(data);
         }
       } catch (error) {
-        console.log(error);
+        toast.error(error);
       } finally {
         setIsLoading(false);
       }
@@ -59,12 +58,9 @@ function Profile() {
         toast.error("ailed to deleted the property");
       }
     } catch (error) {
-      console.error(Error);
       toast.error("Failed to deleted the property");
     }
   };
-  // console.log(userProperties);
-
   return (
     <section className="px-4 ру-6">
       <div className="container-xl lg:container m-auto px-4 py-6">

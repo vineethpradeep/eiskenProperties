@@ -28,7 +28,6 @@ export const GET = async (req) => {
       status: 200,
     });
   } catch (err) {
-    console.log(err);
     return new Response("Something went wrong", { status: 500 });
   }
 };
@@ -99,8 +98,6 @@ export const POST = async (req) => {
       // add uploaded image to propertydata
       propertyData.images = uploadedImages;
     }
-
-    console.log(propertyData);
     const newProperty = new Property(propertyData);
     await newProperty.save();
 
@@ -112,7 +109,6 @@ export const POST = async (req) => {
     //   status: 200,
     // });
   } catch (error) {
-    console.error("error details", error);
     return new Response("Failed to add property", { status: 500 });
   }
 };

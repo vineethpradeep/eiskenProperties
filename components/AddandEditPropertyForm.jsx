@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import PrimaryLink from "./PrimaryLink";
 import properties from "@/properties.json";
 import { toast } from "react-toastify";
 import { fetchProperty } from "@/utils/request";
@@ -11,13 +10,11 @@ import Button from "@/components/Button";
 function AddandEditPropertyForm({ edit = false }) {
   const { id } = useParams();
   const router = useRouter();
-  // const [mounted, setMounted] = useState(false);
   const firstProperty = properties[0];
   const firstPropertyString = JSON.stringify(firstProperty);
   const parseProperty = JSON.parse(firstPropertyString);
   const [fields, setFields] = useState(parseProperty);
   const [isLoading, setIsLoading] = useState(edit);
-  // console.log(fields);
   const amenities = [
     "Wifi",
     "Full kitchen",
@@ -37,12 +34,10 @@ function AddandEditPropertyForm({ edit = false }) {
   ];
 
   useEffect(() => {
-    // setMounted(true);
     if (edit) {
       async function fetchPropertyData() {
         try {
           const propertyData = await fetchProperty(id);
-          // console.log(propertyData);
           if (propertyData && propertyData.rates) {
             const defaultRates = { ...propertyData.rates };
             for (const rate in propertyData) {
@@ -77,9 +72,7 @@ function AddandEditPropertyForm({ edit = false }) {
         [name]: value,
       }));
     }
-    // console.log(name, value);
   };
-  //   console.log(fields);
   const handleAmenitiesChange = (e) => {
     const { value, checked } = e.target;
     const updatedAmenities = [...fields.amenities];
@@ -124,8 +117,7 @@ function AddandEditPropertyForm({ edit = false }) {
         toast.error("Something went wrong");
       }
     } catch (err) {
-      console.log(err);
-      toast.error("Something went wrong");
+      toast.error("Something went wrong", err);
     }
   };
 
@@ -436,7 +428,6 @@ function AddandEditPropertyForm({ edit = false }) {
         )}
 
         <div className="flex flex-col-reverse mt-8">
-          {/* <button>{edit ? "Update" : "Add"} Property</button> */}
           <Button icon={false}>{edit ? "Update" : "Add"}</Button>
         </div>
       </form>

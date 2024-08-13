@@ -26,7 +26,6 @@ export const GET = async () => {
 
     return new Response(JSON.stringify(readMessages), { status: 200 });
   } catch (err) {
-    console.log(err);
     return new Response("Something Went Wrong", { status: 500 });
   }
 };
@@ -69,7 +68,6 @@ export const POST = async (req) => {
       status: 200,
     });
   } catch (err) {
-    console.log(err);
     return new Response(JSON.stringify("Smething went wrong"), {
       status: 500,
     });

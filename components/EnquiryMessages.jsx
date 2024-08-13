@@ -13,7 +13,6 @@ const EnquiryMessages = () => {
       try {
         const res = await fetch("/api/messages");
         const data = await res.json();
-        console.log(data);
         setMessages(data);
       } catch (err) {
       } finally {

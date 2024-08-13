@@ -29,8 +29,6 @@ const Navbar = () => {
     };
     setAuthProviders();
   }, []);
-  // console.log(session);
-  // console.log(providers && Object.values(providers));
   return (
     <header className="inset-x-0 top-0 z-50 flex justify-center mt-2">
       <nav

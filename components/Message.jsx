@@ -38,7 +38,6 @@ const Message = ({ message }) => {
         }
       }
     } catch (err) {
-      console.log(err);
       toast.error("Something wrong");
     }
   };
@@ -54,7 +53,6 @@ const Message = ({ message }) => {
         toast.success("Message as Deleted");
       }
     } catch (err) {
-      console.log(err);
       toast.error("Messag not deleted");
     }
   };
@@ -107,9 +105,11 @@ const Message = ({ message }) => {
       <div className="flex w-full">
         <button
           onClick={handleRead}
-          className=" bg-gray-800 text-white py-2 px-3  w-full"
+          className={`${
+            isRead ? "bg-gray-600" : "bg-gray-800"
+          } text-white py-2 px-3  w-full`}
         >
-          Mark As Read
+          Mark As {isRead ? "Unread" : "Read"}
         </button>
         <button
           onClick={handleDelete}
