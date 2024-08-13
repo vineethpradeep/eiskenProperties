@@ -46,6 +46,7 @@ const Navbar = () => {
               className="w-auto h-auto max-h-24 max-w-full sm:max-h-32 sm:max-w-full"
               width={500}
               height={300}
+              layout="responsive"
             />
           </Link>
         </div>
