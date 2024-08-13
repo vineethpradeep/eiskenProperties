@@ -3,6 +3,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { useSession } from "next-auth/react";
 import { FaPaperPlane } from "react-icons/fa";
+import Button from "@/components/Button";
 
 const ContactForm = ({
   property,
@@ -149,13 +150,16 @@ const ContactForm = ({
             ></textarea>
           </div>
           <div className="text-center mt-6 flex justify-center">
-            <button
+            {/* <button
               className="flex justify-center bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
               style={{ transition: "all 0.15s ease 0s" }}
             >
               <FaPaperPlane className="mr-2" />
               Send Message
-            </button>
+            </button> */}
+            <Button icon={true} Icon={FaPaperPlane}>
+              Send Message
+            </Button>
           </div>
         </form>
       )}

@@ -6,6 +6,7 @@ import properties from "@/properties.json";
 import { toast } from "react-toastify";
 import { fetchProperty } from "@/utils/request";
 import Spinner from "./Spinner";
+import Button from "@/components/Button";
 
 function AddandEditPropertyForm({ edit = false }) {
   const { id } = useParams();
@@ -435,7 +436,8 @@ function AddandEditPropertyForm({ edit = false }) {
         )}
 
         <div className="flex flex-col-reverse mt-8">
-          <button>{edit ? "Update" : "Add"} Property</button>
+          {/* <button>{edit ? "Update" : "Add"} Property</button> */}
+          <Button icon={false}>{edit ? "Update" : "Add"}</Button>
         </div>
       </form>
     </div>
