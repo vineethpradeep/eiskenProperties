@@ -86,12 +86,10 @@ export const POST = async (req) => {
       const imageBase64 = imageData.toString("base64");
 
       // req upload to cloudinary
-      const result = await cloudinary.uploader.upload_large(
+      const result = await cloudinary.uploader.upload(
         `data:image/png;base64,${imageBase64}`,
         {
           folder: "eiskenproperties",
-          resource_type: "auto",
-          chunk_size: 6000000,
         }
       );
       imageUploadPromises.push(result.secure_url);
