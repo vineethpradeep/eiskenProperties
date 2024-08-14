@@ -7,7 +7,7 @@ import Properties from "@/components/Properties";
 const PropertiesPage = () => {
   return (
     <>
-      <section className="flex justify-center mt-4">
+      <section className="flex justify-center mt-6">
         <SearchPropertyForm translateUp={false} />
       </section>
       <Properties />

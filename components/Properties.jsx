@@ -39,7 +39,7 @@ const Properties = () => {
   return isLoading ? (
     <Spinner loading={isLoading} />
   ) : (
-    <section className="px-4 ру-6">
+    <section className="px-4 ру-8 mt-8">
       <div className="container-xl lg:container m-auto px-4 py-6">
         {properties.length === 0 ? (
           <p>No Search Properties found</p>

@@ -10,11 +10,12 @@ import Button from "@/components/Button";
 function AddandEditPropertyForm({ edit = false }) {
   const { id } = useParams();
   const router = useRouter();
-  const firstProperty = properties[0];
+  const firstProperty = properties[3];
   const firstPropertyString = JSON.stringify(firstProperty);
   const parseProperty = JSON.parse(firstPropertyString);
   const [fields, setFields] = useState(parseProperty);
   const [isLoading, setIsLoading] = useState(edit);
+  const [imageIsLoading, setIsImageLoading] = useState(false);
   const amenities = [
     "Wifi",
     "Full kitchen",
@@ -89,17 +90,17 @@ function AddandEditPropertyForm({ edit = false }) {
       amenities: updatedAmenities,
     }));
   };
-  const handleImageChange = (e) => {
-    const { files } = e.target;
-    const updatedImage = [...fields.images];
-    for (const file of files) {
-      updatedImage.push(file);
-    }
-    setFields((prevFields) => ({
-      ...prevFields,
-      images: updatedImage,
-    }));
-  };
+  // const handleImageChange = (e) => {
+  //   const { files } = e.target;
+  //   const updatedImage = [...fields.images];
+  //   for (const file of files) {
+  //     updatedImage.push(file);
+  //   }
+  //   setFields((prevFields) => ({
+  //     ...prevFields,
+  //     images: updatedImage,
+  //   }));
+  // };
 
   const handleEditSubmit = async (e) => {
     e.preventDefault();
@@ -121,6 +122,86 @@ function AddandEditPropertyForm({ edit = false }) {
     }
   };
 
+  const handleImageChange = async (e) => {
+    const { files } = e.target;
+    const updatedImageUrls = [...fields.images];
+    setIsImageLoading(true);
+
+    const uploadPromises = Array.from(files).map(async (file) => {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", "ml_default");
+      try {
+        const response = await fetch(
+          `https://api.cloudinary.com/v1_1/eiskenproperties/image/upload`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+
+        if (!response.ok) {
+          toast.error("Image Uploading Error");
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        if (response.ok) {
+          const data = await response.json();
+          toast.success("Image Uploaded successfully");
+          return data.secure_url;
+        }
+      } catch (error) {
+        console.error("Error uploading image:", error);
+        return null;
+      }
+    });
+
+    const uploadedImageUrls = await Promise.all(uploadPromises);
+    setFields((prevFields) => ({
+      ...prevFields,
+      images: [...updatedImageUrls, ...uploadedImageUrls.filter(Boolean)],
+    }));
+    setIsImageLoading(false);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+
+    Object.keys(fields).forEach((key) => {
+      if (Array.isArray(fields[key])) {
+        fields[key].forEach((item) => {
+          formData.append(key, item);
+        });
+      } else if (typeof fields[key] === "object" && fields[key] !== null) {
+        Object.keys(fields[key]).forEach((subKey) => {
+          formData.append(`${key}.${subKey}`, fields[key][subKey]);
+        });
+      } else {
+        formData.append(key, fields[key]);
+      }
+    });
+
+    try {
+      debugger;
+      const response = await fetch("/api/properties", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      if (response.ok) {
+        toast.success("Property Added Successfully");
+        router.push(response.url);
+      }
+    } catch (error) {
+      toast.error("Error submitting form", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   if (isLoading) {
     return <Spinner loading={isLoading} />;
   }
@@ -128,13 +209,15 @@ function AddandEditPropertyForm({ edit = false }) {
   return (
     <div className="bg-primary-color-light py-8 px-6 flex flex-col gap-4 mt-14 mb-14">
       <form
-        {...(edit
-          ? { onSubmit: handleEditSubmit }
-          : {
-              action: "/api/properties",
-              method: "POST",
-              encType: "multipart/form-data",
-            })}
+        // {...(edit
+        //   ? { onSubmit: handleEditSubmit }
+        //   : {
+        //       action: "/api/properties",
+        //       method: "POST",
+        //       encType: "multipart/form-data",
+        //     })}
+        onSubmit={edit ? handleEditSubmit : handleSubmit}
+        encType="multipart/form-data"
       >
         <h2 className="text-3xl text-center font-semibold mb-6">
           {edit ? "Edit" : "Add"} Property
@@ -428,7 +511,9 @@ function AddandEditPropertyForm({ edit = false }) {
         )}
 
         <div className="flex flex-col-reverse mt-8">
-          <Button icon={false}>{edit ? "Update" : "Add"}</Button>
+          <Button icon={false} disabled={imageIsLoading}>
+            {edit ? "Update" : `${imageIsLoading ? "Loading..." : "Add"}`}
+          </Button>
         </div>
       </form>
     </div>
