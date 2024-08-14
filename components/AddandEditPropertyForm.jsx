@@ -10,7 +10,7 @@ import Button from "@/components/Button";
 function AddandEditPropertyForm({ edit = false }) {
   const { id } = useParams();
   const router = useRouter();
-  const firstProperty = properties[3];
+  const firstProperty = properties[0];
   const firstPropertyString = JSON.stringify(firstProperty);
   const parseProperty = JSON.parse(firstPropertyString);
   const [fields, setFields] = useState(parseProperty);
