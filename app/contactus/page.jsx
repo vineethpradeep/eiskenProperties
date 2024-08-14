@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 const ContactusPage = () => {
   return (
     <>
-      <section className="relative block bg-gray-900 mt-20">
+      <section className="relative block bg-gray-900 mt-20 pb-20">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
           style={{ height: "80px" }}

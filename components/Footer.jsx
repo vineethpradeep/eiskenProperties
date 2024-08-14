@@ -61,7 +61,7 @@ const Footer = () => {
             <h5 className="text-lg mt-0 mb-2 text-gray-700">
               Eisken Properties, will respond 1-2 business days.
             </h5>
-            <div className="mt-6">
+            <div className="mt-6 mb-6">
               <button
                 className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
